@@ -1,4 +1,5 @@
-//
+//AUTHOR: phoenix_0010
+//Jalpaiguri Government Engineering College
 
 
 
@@ -37,24 +38,6 @@ const ll mod = (ll) 1e9  +  7;
 
 
 
-ll ncr(ll n,ll r) {
-    ll val=1,i,j,p=2;
-    rfr(i,n-r+1,n+1) {
-        val*=i;
-        while(val%p==0 && p<=r) {
-            val/=p;
-            p+=1;
-        }
-    }
-    if(p<r) {
-        fr(i,p,r+1) val/=i;
-    }
-    return val;
-}
-
-
-
-
 void cazz() {
     ll t=1,i=0,j,n;
     cin>>t;
@@ -80,6 +63,8 @@ void cazz() {
                 if(!vis[it.ff]) q.push({-dist[it.ff],it.ff});
             }
         }
+	    
+	//Negetive cycle detection
         bool f=0;
         fr(i,1,n+1) {
             f=0;
